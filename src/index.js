@@ -9,7 +9,6 @@ const errorMessage = document.getElementsByClassName('error')[0];
 
 fetchBreeds()
   .then(data => {
-    //   console.log(data);
     select.innerHTML = data
       .map(({ id, name }) => `<option value = "${id}"> ${name}</option>`)
       .join('<br>');
